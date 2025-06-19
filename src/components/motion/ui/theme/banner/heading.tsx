@@ -5,11 +5,11 @@ import {splitText} from "motion-plus";
 import {animate, stagger} from "motion";
 export function Heading(){
 
-  const ref = useRef(false);
+  const spanRef = useRef(null);
   useEffect((()=>{
     document.fonts.ready.then(()=>{
-      if(ref.current){
-        const element = ref.current as unknown as HTMLDivElement;
+      if(spanRef.current){
+        const element = spanRef.current as unknown as HTMLSpanElement;
         element.style.visibility = 'visible';
         const {chars} = splitText(element);
         animate(chars,
@@ -31,9 +31,9 @@ export function Heading(){
   return (
     <section className={'bg-slate-200 py-32'}>
       <div className={'max-w-7xl mx-auto h-2 flex flex-col justify-center items-center gap-y-5'}>
-        <span ref={ref} className={'text-5xl md:text-7xl lg:text-9xl invisible'}>
+        <div ref = {spanRef} className={'text-5xl md:text-7xl lg:text-9xl invisible'}>
           Example
-        </span>
+        </div>
         <h2 className={'text-center text-base md:text-2xl lg:text-3xl'}>
           Each example includes ui & video explanation & pretty source code
         </h2>

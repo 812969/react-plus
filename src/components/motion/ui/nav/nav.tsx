@@ -72,7 +72,7 @@ export default function Page() {
           </li>
         </ul>
         <button className={'ml-auto md:hidden flex items-center justify-center'}>
-           <Menu onClick={toggle}/>
+           <Menu enabledHover={ false} onClick={toggle}/>
         </button>
       </section>
 
