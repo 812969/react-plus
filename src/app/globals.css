@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+@theme{
+
+    @keyframes move {
+        from{ opacity: 0;transform: translateY(10px);}
+        to {opacity: 1;transform: translateY(0);}
+
+    }
+    --animate-move: move 1s linear;
+}
+@utility animate-delay-* {
+    animation-delay: calc(--value(integer) * 1ms);
+}
