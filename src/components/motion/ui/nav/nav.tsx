@@ -28,20 +28,45 @@ export default function Page() {
           example
         </Link>
         <ul className={'hidden md:flex gap-x-10 items-center'}>
-          <li><a className={'p-2'} href={ Tailwind } >Tailwind</a></li>
-          <li><a className={'p-2'} href={ React } >React</a></li>
-          <li><a className={'p-2'} href={ Zustand } >Zustand</a></li>
-          <li><a className={'p-2'} href={ Motion } >Motion</a></li>
-          <li><a className={'p-2'} href={ Next } >Next</a></li>
+          <li>
+            <a className={'p-2 relative block group'} href={ Tailwind } >
+              Tailwind
+              <Underline/>
+            </a>
+          </li>
+          <li>
+            <a className={'p-2 relative block group'} href={ React } >
+              React
+              <Underline/>
+            </a>
+          </li>
+          <li>
+            <a className={'p-2 relative block group'} href={ Zustand } >
+              Zustand
+              <Underline/>
+            </a>
+          </li>
+          <li>
+            <a className={'p-2 relative block group'} href={ Motion } >
+              Motion
+              <Underline/>
+            </a>
+          </li>
+          <li>
+            <a className={'p-2 relative block group'} href={ Next } >
+              Next
+              <Underline/>
+            </a>
+          </li>
         </ul>
         <ul className={'hidden lg:flex gap-x-8 items-center ml-auto'}>
           <li>
-            <a className={'p-2 text-2xl'} href= { Bili } >
+            <a className={'p-2 text-2xl hover:text-blue-400'} href= { Bili } >
               <RiRobot2Line/>
             </a>
           </li>
           <li>
-            <a className={'p-2 text-2xl'} href={Youtube}>
+            <a className={'p-2 text-2xl hover:text-red-400'} href={Youtube}>
               <CiYoutube/>
             </a>
           </li>
@@ -54,5 +79,11 @@ export default function Page() {
       <Aside open={open} toggle={toggle}/>
 
     </nav>
+  )
+}
+
+function Underline(){
+  return(
+    <span className={cn('absolute left-0 bottom-0 w-full h-0.5 bg-white scale-x-0 duration-300 group-hover:scale-x-100')}></span>
   )
 }
