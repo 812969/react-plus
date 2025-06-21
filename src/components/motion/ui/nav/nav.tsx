@@ -10,7 +10,7 @@ import {Aside} from "@/components/motion/ui/nav/aside";
 
 export default function Page() {
 
-  const [open,toggle] = useToggle(false);
+  const [open,toggle] = useToggle(true);
 
   const Tailwind = "https://www.tailwindcss.cn/";
   const React = "https://react.dev/";
@@ -72,7 +72,7 @@ export default function Page() {
           </li>
         </ul>
         <button className={'ml-auto md:hidden flex items-center justify-center'}>
-           <Menu enabledHover={ false} onClick={toggle}/>
+           <Menu onClick={toggle}/>
         </button>
       </section>
 
