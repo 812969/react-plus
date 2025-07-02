@@ -8,12 +8,12 @@ import {AnimateText} from "@/components/motion/animate-text";
 export function Heading(){
 
   return (
-    <section className={ 'py-32'}>
+    <section className={ 'py-48 px-5'}>
       <div className={'max-w-7xl mx-auto h-2 flex flex-col justify-center items-center gap-y-5'}>
-        <div  className={'text-5xl md:text-7xl lg:text-9xl'}>
+        <div  className={'text-center text-5xl md:text-7xl lg:text-9xl'}>
           Example
         </div>
-        <h2 className={'text-center text-base md:text-2xl lg:text-3xl'}>
+        <h2 className={'text-center text-base sm:text-xl md:text-2xl lg:text-3xl'}>
           <AnimateText
             className="gap-x-2"
             content={['Each', 'example', 'includes', 'ui', '&', 'video', 'explanation', '&', 'pretty', 'source', 'code']}

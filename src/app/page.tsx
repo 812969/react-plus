@@ -7,7 +7,7 @@ export default function Page(){
   return (
     <div>
       <Nav></Nav>
-      <Heading/>
+      <Heading />
       <CounterContainer/>
     </div>
   )
