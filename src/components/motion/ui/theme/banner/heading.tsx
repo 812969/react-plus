@@ -15,7 +15,7 @@ export function Heading(){
         </div>
         <h2 className={'text-center text-base sm:text-xl md:text-2xl lg:text-3xl'}>
           <AnimateText
-            className="gap-x-2"
+            className="gap-x-2 flex flex-wrap"
             content={['Each', 'example', 'includes', 'ui', '&', 'video', 'explanation', '&', 'pretty', 'source', 'code']}
             stagger={0.05}
             initial={{
