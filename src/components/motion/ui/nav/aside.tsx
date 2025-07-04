@@ -11,7 +11,7 @@ export function Aside({open,toggle}: AsideProps){
   return (
     <div className={cn('fixed top-0 left-0 w-full h-screen bg-black md:hidden z-1000 duration-500',open ? 'translate-x-full' : 'translate-x-0')}>
       <div className={'h-20 flex justify-end items-center px-5'}>
-        <Menu onClick={toggle} enabledHover={open}/>
+        <Menu onClick={toggle}/>
       </div>
       <section className={'h-full flex flex-col items-center gap-y-8 py-10'}>
         <h2 className={'text-2xl text-purple-500 mb-5'}>Pinia</h2>
