@@ -1,6 +1,6 @@
 import { div } from "motion/react-client";
-import { AnimateCounter } from "@/components/motion/ui/counter/animate-counter";
-import {AnimateContent} from "@/components/motion/ui/counter/animate-content";
+import { AnimateCounter } from "@/components/motion/ui/theme/counter/animate-counter";
+import {AnimateContent} from "@/components/motion/ui/theme/counter/animate-content";
 
 export function CounterContainer(){
   const titles = [

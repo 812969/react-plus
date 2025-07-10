@@ -1,0 +1,23 @@
+export function ExampleTextRotation() {
+    const text = ['千','里','之','行','，','始','于','足','下','。'];
+    const D = 360 / text.length;
+    return (
+        <div className={'size-72 [--r:100px]'}>
+            <ul className={'relative size-full rounded-full animate-spin animate-duration-5000 shadow-2xl shadow-slate-600'}
+                >
+                {
+                    text.map((char,idx) => (
+                        <li className={'absolute size-fit inset-0 m-auto'}
+                            style={{
+                                transform: `rotate(${D * idx}deg) translateY(var(--r))`
+                            }}
+                            key={ idx }
+                        >
+                            { char}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    )
+}
